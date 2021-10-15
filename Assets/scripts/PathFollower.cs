@@ -32,7 +32,7 @@ public class PathFollower : MonoBehaviour
         float DistanceToWayPoint = Vector3.Distance(transform.position, _currentWayPoint.GetPosition());
         if(DistanceToWayPoint <= _ArrivalThreshold)
         {
-            print("I am near the point");
+           
             // 1.1. zo, ja, is dit mijn eindpunt?
             if (_currentWayPoint == _path.GetPathEnd())
             {
@@ -64,7 +64,6 @@ public class PathFollower : MonoBehaviour
 
     void PathCompleter()
     {
-        print("Ik ben bij het eindpunt");
         _speed = 0.0f;
 
         FindObjectOfType<PlayerHealthComponent>().TakeDamage(1);

@@ -10,6 +10,7 @@ public class EnemyHealthComponent : HealthOponent
         {
             TakeDamage(5);
         }
+        
     }
 
     protected override void HandleTakeDamage()
@@ -23,5 +24,14 @@ public class EnemyHealthComponent : HealthOponent
     {
         base.Death();
         Destroy(gameObject);
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Bullet")
+        {
+            Debug.Log("It takes damage");
+            TakeDamage(5);
+        }
     }
 }

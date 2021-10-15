@@ -33,12 +33,12 @@ public class HealthOponent : MonoBehaviour
 
     protected virtual void HandleTakeDamage()
     {
-        print("Ik krijg Damage");
+       
     }
 
     protected virtual void Death()
     {
-        print("Ik ga dood");
+        
     }
 
 }
